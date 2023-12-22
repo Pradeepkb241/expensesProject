@@ -36,13 +36,13 @@ export default function Expenses(props) {
       {expensesContent}
       
       
-      {/* {props.items.map((expense) => (
+      {props.items.map((expense) => (
       <ExpenseItem 
       key={expense.id}
       title={expense.title} 
       amount={expense.amount} 
       date={expense.date} 
-      />))} */}
+      />))}
 
 
       {/* <ExpenseItem title={props.items[0].title} amount={props.items[0].amount} date={props.items[0].date} location={props.items[0].location} />
