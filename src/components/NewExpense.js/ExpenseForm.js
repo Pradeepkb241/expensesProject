@@ -6,6 +6,7 @@ export default function ExpenseForm(props) {
     const[enteredTitle, setEnteredTitle]=useState('');
     const[enteredAmount, setEnteredAmount] = useState('');
     const[eneteredDate, setEnteredDate] = useState('');
+    const[enteredLocation, setEnteredLocation] = useState('');
     
     //Alternative
     // const [userInput, setUserInput] = useState({
@@ -36,6 +37,9 @@ export default function ExpenseForm(props) {
         //     enteredAmount: event.target.value
         // });
     }
+    const locationChangeHandler =(event)=>{
+        setEnteredLocation(event.target.value);
+    }
 
     const dateChangeHandler = (event) =>{
         setEnteredDate(event.target.value);
@@ -57,6 +61,7 @@ export default function ExpenseForm(props) {
         setEnteredTitle('');
         setEnteredAmount('');
         setEnteredDate('');
+        setEnteredLocation(''); 
     }
   return (
     <form onSubmit={submitHandler}>
@@ -69,6 +74,10 @@ export default function ExpenseForm(props) {
             <div className='new-expense__control'>
                 <label>Amount</label>    
                 <input type="number" min="0.01" step="0.01" value={enteredAmount} onChange={amountChangeHandler} />
+            </div>
+            <div className='new-expense__control'>
+                <label>Location</label>    
+                <input type="text" value={enteredLocation} onChange={locationChangeHandler} />
             </div>
 
             <div className='new-expense__control'>
