@@ -17,6 +17,7 @@ export default function ExpensesList(props) {
               title={expense.title}
               amount={expense.amount}
               date={expense.date}
+              location={expense.location}
             />
           ))}
         </ul>
@@ -33,6 +34,7 @@ export default function ExpensesList(props) {
           title={expense.title}
           amount={expense.amount}
           date={expense.date}
+          location={expense.location}
         />
       ))}
     </ul>

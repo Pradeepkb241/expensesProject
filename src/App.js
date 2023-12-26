@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense.js/NewExpense";
-// import ExpenseItem from "./components/ExpenseItem";
+
 const DUMMY_EXPENSES = [
   {
     id: 'e1',
